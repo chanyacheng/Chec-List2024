@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Sortable 庫 -->
+  <script src="https://unpkg.com/sortablejs@1.14.0/Sortable.min.js"></script>
+
+
+
+
+  </head>
+  <body>
+
+    <!-- ***** -->
+    <h2>北部儲運中心例行性滅火器查檢</h2>
+
+     <form>
+      <label for="date">日期:</label>
+      <input type="text" id="date" readonly>
+    <label for="inspector">查檢人:</label>
+      <select id="inspector" required>
+        <option value="詹亞澄">詹亞澄</option>
+        <option value=""></option>
+      </select>
+</br>
+
+<!-- *** -->
+<!-- Main container for drag and drop boxes and other elements -->
+    <div class="main-container">
+        <!-- Container for drag and drop boxes -->
+        <div class="container">
+            <!-- Drag and drop box A -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerA')">行政大樓1F</div>
+            <!-- Inner container  -->
+            <div class="inner-container" id="innerContainerA">
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C1(通訊機房)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C2(泵浦機房)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.1(行政1F走道)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.2(行政1F走道)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.3(行政1F走道)</div>
+            </div>
+
+            <!-- Drag and drop box B -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerB')">行政大樓2F</div>
+            <!-- Inner container for B -->
+            <div class="inner-container" id="innerContainerB">
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C3(電腦機房)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.4(行政2F走道)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.5(行政2F走道)</div>
+            </div>
+
+            <!-- Drag and drop box C -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerC')">主倉1F-1</div>
+         <!-- Inner container for C -->
+            <div class="inner-container" id="innerContainerC">
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C6(主倉1F電梯機房)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.13(監控室外)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.14(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.15(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.16(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.17(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.18(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.19(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.20(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.21(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.22(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.23(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.24(主倉1F)</div>
+            </div>
+
+                        <!-- Drag and drop box C-2 -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerC-2')">主倉1F-2</div>
+         <!-- Inner container for C-2 -->
+            <div class="inner-container" id="innerContainerC-2">
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.25(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.26(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.27(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.28(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.29(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.30(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.31(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.32(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.33(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.34(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.35(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.36(主倉1F)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.37(主倉1F)</div>
+
+            </div>
+
+
+             <!-- Drag and drop box D -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerD')">主倉2F-1</div>
+            <!-- Inner container for D -->
+            <div class="inner-container" id="innerContainerD">
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.12(夾層機房外)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C7(主倉1F夾層機房)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.38(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.39(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.40(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.41(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.42(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.43(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.44(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.45(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.46(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.47(主倉2F)</div>             
+
+
+            </div>
+
+             <!-- Drag and drop box D-2 -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerD')">主倉2F-2</div>
+            <!-- Inner container for D-2 -->
+            <div class="inner-container" id="innerContainerD-2">
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.48(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.49(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.50(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.51(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.52(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.53(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.54(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.55(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.56(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.57(主倉2F)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.58(主倉2F)</div>
+
+
+            </div>
+            
+             <!-- Drag and drop box E -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerE')">油庫</div>
+          <!-- Inner container for E-->
+            <div class="inner-container" id="innerContainerE">
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器C10(輪架型)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.10(油庫)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.11(油庫)</div>       
+            </div>
+
+             <!-- Drag and drop box F -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerF')">車庫+泡沫室</div>
+          <!-- Inner container for F-->
+            <div class="inner-container" id="innerContainerF">
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.9(車庫)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C8(泡沫原液室)</div>
+                <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C9(泡沫原液室)</div>
+            </div>
+
+             <!-- Drag and drop box G -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerG')">F、G棟</div>
+             <!-- Inner container for G -->
+            <div class="inner-container" id="innerContainerG">
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.F1(F棟)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.F2(F棟)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.F3(F棟)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.F4(F棟)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.G1(G棟)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.G2(G棟)</div>
+            </div>
+
+    <!-- Drag and drop box H -->
+            <div class="drag-box" draggable="true" ondragstart="drag(event)" onclick="toggleInnerContainer('innerContainerG')">戶外環境</div>
+             <!-- Inner container for H -->
+            <div class="inner-container" id="innerContainerG">
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.6(消防泵浦室)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.7(運輸商室)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">乾粉滅火器No.8(警衛室)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C5(主倉1電器室)</div>
+             <div class="drag-box" draggable="true" ondragstart="drag(event)">CO2滅火器C4(主倉1F發電機室)</div>
+            </div>
+
+
+        </div>
+
+
+    <!-- Other elements container -->
+        <div class="other-elements">
+
+    <!-- Input box -->
+    <!-- <input type="text" id="extinguisherNumber" class="input-box" placeholder="滅火器編號:" readonly > -->
+        <input type="text" id="extinguisherNumber"  style="border: 0.5px groove #d1cfcf; " placeholder="" readonly >
+
+
+
+    <!-- Allow drop in input box -->
+    <div ondrop="drop(event)" ondragover="allowDrop(event)" style="text-align: center; border: 0.8px dashed #d1cfcf; padding: 20px; margin: 0px;width: 90%;">
+    請拖拉到這裡...
+    </div>
+
+   
+
+
+    <br> 
+
+      <label for="weight">重量輸入(>=11.7KG):</label>
+      <input type="text" id="weight">
+      
+   
+      <br>
+       <input type="button" value="CO2滅火器全部正常請點我" onclick="resetOptions2()">
+  <br>
+ <input type="button" value="乾粉滅火器全部正常請點我" onclick="resetOptions()">
+
+      <br>
+      <!-- checkbox 列表 -->
+      <label>1.壓力範圍:</label>     
+      <input type="radio" name="pressure" id="normalPressure" value="正常" />
+      <label for="normalPressure">正常</label>
+      <input type="radio" name="pressure" id="abnormalPressure" value="不正常" />
+      <label for="abnormalPressure">壓力偏高</label> 
+      <input type="radio" name="pressure" id="abnormalPressure" value="不正常" />
+      <label for="abnormalPressure">壓力偏低</label> 
+    
+      <br>     
+      <label>2.瓶身外觀:</label>     
+      <input type="radio" name="appearance" id="normalAppearance" value="正常" >
+      <label for="normalAppearance">正常</label>
+      <input type="radio" name="appearance" id="abnormalAppearance" value="不正常">
+      <label for="abnormalAppearance">不正常</label>  
+      <br>
+      <label>3.插梢把手:</label>     
+      <input type="radio" name="nozzle" id="normalNozzle" value="正常" />
+      <label for="normalNozzle">正常</label>
+      <input type="radio" name="nozzle" id="abnormalNozzle" value="不正常" />
+      <label for="abnormalNozzle">不正常</label>
+      <br>
+      <label>4.噴嘴噴管:</label>      
+      <input type="radio" name="handle" id="normalHandle" value="正常" />
+      <label for="normalHandle">正常</label>
+      <input type="radio" name="handle" id="abnormalHandle" value="不正常" />
+      <label for="abnormalHandle">不正常</label>
+      <br>
+      <br>
+      <input type="button" value="送出" onclick="submitForm()">
+       <br>
+      <input type="button" value="清除" onclick="clearForm()">
+
+    <br>
+<!-- Add iframe to embed Google Sheets with only the latest 3 rows and specific columns, hiding the title -->
+  <div id="iframeContainer" style="height: 0; overflow: hidden;">
+
+<iframe id="myIframe"  src="https://docs.google.com/spreadsheets/d/1t0a_U0ylaUHUScolqBtLR1U6n1GY-N7Zd__MCAN8v58/gviz/tq?tqx=out:html&tq=SELECT A, B,H ORDER BY A DESC LIMIT 4&headers=false" width="100%" height="280px"style="border: 2px solid #ccc; font-size :5px;" id="myIframe"  ></iframe>
+
+</div>
+
+<div id="toggleButton" onclick="toggleIframe()">即時查看資料(請重新整理)</div>
+
+
+
+
+    <script>
+
+      document.getElementById('date').value = getCurrentDate();
+
+      function getCurrentDate() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = (now.getMonth() + 1).toString().padStart(2, '0');
+        var day = now.getDate().toString().padStart(2, '0');
+        var hours = now.getHours().toString().padStart(2, '0');
+        var minutes = now.getMinutes().toString().padStart(2, '0');
+
+        return `${year}/${month}/${day} ${hours}:${minutes}`;
+      }
+
+      function submitForm() {
+        var date = document.getElementById('date').value;
+        var extinguisherNumber = document.getElementById('extinguisherNumber').value;
+        var inspector = document.getElementById('inspector').value;
+        var weight = document.getElementById('weight').value;
+        // 獲取每組 checkbox 中選中的選項值
+        var appearance = getSelectedValue('appearance');
+        var nozzle = getSelectedValue('nozzle');
+        var handle = getSelectedValue('handle');
+        var pressure = getSelectedValue('pressure');
+        //  var extinguisherNumber = document.getElementById('extinguisherNumber').value;
+            // var inspector = document.getElementById('inspector').value;
+
+            // 檢查滅火器編號和查檢人是否為空值
+            if (extinguisherNumber === '' || inspector === '') {
+           
+
+                alert('滅火器編號和查檢人欄位不可為空值！');
+            } else {
+                // 這裡可以執行送出資料到試算表的相關動作
+                // 例如使用 Google Apps Script 或其他後端處理方式
+                alert('資料已成功送出！');
+            }
+
+
+        // 呼叫 Google Apps Script 函數
+        google.script.run.writeToSheet(date, extinguisherNumber, appearance, nozzle, handle, pressure, weight,inspector);       
+      
+
+        clearForm();
+      }
+       function getSelectedValue(groupName) {
+        var radios = document.getElementsByName(groupName);
+        for (var i = 0; i < radios.length; i++) {
+          if (radios[i].checked) {
+            return radios[i].value;
+          }
+        }
+        return '免檢查'; // 如果沒有選擇任何選項
+      }
+
+      function clearForm() {
+        document.getElementById('extinguisherNumber').value = '';
+        // document.getElementById('inspector').value = '';
+        document.getElementById('weight').value = '';
+        document.getElementById('normalAppearance').checked = false; 
+        document.getElementById('abnormalAppearance').checked = false; 
+        document.getElementById('normalNozzle').checked = false;
+        document.getElementById('abnormalNozzle').checked = false;
+         document.getElementById('normalHandle').checked = false;
+        document.getElementById('abnormalHandle').checked = false;
+         document.getElementById('normalPressure').checked = false;
+        document.getElementById('abnormalPressure').checked = false;
+  
+
+      }
+
+      function resetOptions() {
+        // Reset all radio buttons to the first option
+        setRadioValue('appearance', 'normalAppearance');
+        setRadioValue('nozzle', 'normalNozzle');
+        setRadioValue('handle', 'normalHandle');
+        setRadioValue('pressure', 'normalPressure');
+      }
+
+      function resetOptions2() {
+        // Reset all radio buttons to the first option
+        setRadioValue('appearance', 'normalAppearance');//瓶身外觀
+        setRadioValue('nozzle', 'normalNozzle');//噴嘴噴管
+        setRadioValue('handle', 'normalHandle');//插梢把手
+        // setRadioValue('pressure', 'normalPressure');壓力指示值
+      }
+
+      function setRadioValue(groupName, radioId) {
+        var radios = document.getElementsByName(groupName);
+        for (var i = 0; i < radios.length; i++) {
+          radios[i].checked = radios[i].id === radioId;
+        }
+      }
+
+
+
+  
+    </script>
+
+ <script>
+        function toggleIframe() {
+            var iframeContainer = document.getElementById('iframeContainer');
+            var iframe = document.getElementById('myIframe');
+            if (iframeContainer.style.height === '300px') {
+                iframeContainer.style.height = '0';
+            } else {
+                iframeContainer.style.height = '300px'; // 設定你想要的展開高度
+            }
+        }
+    </script>
+
+   <!-- drag-box syles   -->
+    <script>
+
+         function toggleInnerContainer(containerId) {
+            var innerContainer = document.getElementById(containerId);
+            innerContainer.classList.toggle('show');
+        }
+
+
+        var draggedBox; // 保存被拖曳的元素
+
+        function allowDrop(event) {
+            event.preventDefault();
+    
+        }
+
+        function dragStart(event) {
+            draggedBox = event.target;
+        }
+
+        function dragOver(event) {
+            event.preventDefault();
+            var target = event.target;
+            var rect = target.getBoundingClientRect();
+            var mouseY = event.clientY;
+
+            // 將被拖曳的元素標記為拖動過程中的位置
+            if (mouseY > rect.y + rect.height / 2) {
+                target.classList.add('drag-over');
+            } else {
+                target.classList.remove('drag-over');
+            }
+        }
+
+
+        function drag(event) {
+            draggedBox = event.target;
+            event.dataTransfer.setData('text', event.target.innerText);
+          
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData('text');
+            var extinguisherNumber = document.getElementById('extinguisherNumber');            
+            extinguisherNumber.value = data;
+
+            // 隱藏被拖曳的元素
+            draggedBox.style.backgroundColor = '#ddd'; // 將顏色變淡
+            draggedBox.style.pointerEvents = 'none'; // 禁止再次拖曳
+             draggedBox.style.display = 'none'; // 隱藏
+
+
+            
+        }
+
+       
+     
+        
+    </script>
+
+
+
+
+
+
+  </body>
+  <style>
+      /* Your existing CSS styles go here */
+
+      .container {
+       
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      h2 {
+        text-align: center;
+
+      }
+      h3 {
+        text-align: center;
+
+      }
+
+
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .label-group {
+        margin-bottom: 10px;
+      }
+
+      .label-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      select,
+      input[type="button"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      /* Apply different colors to buttons */
+      input[type="button"] {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="button"]:hover {
+        background-color: #4caf50; /* Green */
+      }
+
+      input[type="button"].reset {
+        background-color: #f44336; /* Red */
+      }
+
+      input[type="button"].submit {
+        background-color: #2196F3; /* Blue */
+      }
+
+      input[type="button"].clear {
+        background-color: #ff9800; /* Orange */
+      }
+
+      .checkbox-group {
+        margin-bottom: 10px;
+      
+      }
+
+      .checkbox-group label {
+        display: block;
+        margin-bottom: 5px;
+         margin-right: 20px;
+      }
+
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+
+    
+
+       /* ************* */
+
+  #iframeContainer {
+            overflow: hidden;
+            transition: height 0.3s;
+        }
+
+        #toggleButton {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            
+        }
+
+
+
+       /* **************** */
+
+
+      /* Responsive Design */
+      @media screen and (max-width: 600px) {
+        .container {
+          margin-top: 20px;
+        }
+
+        form {
+          max-width: none;
+        }
+      }
+
+/* drag-box syles  */
+/* dragbox容器 */
+        .container {
+            display: diaplay;
+            width: 25% ;
+            padding: 10px;
+            margin: 10px;
+            
+        }
+
+        .main-container {
+            display: flex;
+            width: 100%;
+     
+        }
+
+        .drag-box {
+            width: 70%;
+            height: 20px;
+            
+            background-color: #10a80b;
+            font-size: 14px;
+            color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            line-height: 15px;
+            margin: 10px;
+            cursor: move;
+            margin-top: 15px;
+            transition: background-color 0.5s ease; /* 添加淡入淡出效果 */
+        }
+
+        .input-box {
+            flex: 1; /* 佔據剩餘空間 */
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .other-elements {
+            flex: 1; /* 佔據剩餘空間 */
+            padding: 10px;
+        }
+
+        /* 隱藏內部的 .drag-box */
+        .inner-container {
+            display: none;
+            width: 80%;
+            margin: 10px;
+              background-color: #e4c0c0;
+            flex-direction: column; /* 垂直排列內部 .drag-box */
+        }
+
+        .inner-container.show {
+            display: flex;
+            }
+
+  </style>
+</html>
